@@ -4,7 +4,7 @@
 586,
 585,
 564,
-565,"aaDD6nFzvwBH15u>[EkOSRByUq<Bpbn@o3SUpQhmZ6_OrJi;DdMY4kiza;Mf^RkqL<[utHN8tttJNG>ul_m7D?CFwdMuLhAXou]MwNd]HKd\l;5sWJkZfCNc@15Fm<3XHyccY`hu4jKMTSUCb<Bhj`__TJp>[YeRQf4fgaG;q<;7ASIPAsO_x^@opZZ4bct7:HXriE>M"
+565,"w[7HbxWy6eVijL0V?NwP7Dlawtoe1QsQXq??tHuCWfX[m[oU;Z\>BJx?2g0hq\Vc[`_Nne0ciiFm1^C3vC;pecL4CIM\hnr04Ot7S[h1aeN^JtAenAoO`XBrBd_thx[gP6@TA7a]?8O6NFCgpG2<upe^<q0;Kp6<QNCjMbV\vAhvR;VDKusrWFTJSL00SS?Z`?4J:9Ij"
 559,1
 928,0
 593,
@@ -64,7 +64,7 @@ pPath,"OPTIONAL: Saves the file and the backup of the existing rule in this loca
 581,0
 582,0
 603,0
-572,243
+572,245
 #Region CallThisProcess
 # A snippet of code provided as an example how to call this process should the developer be working on a system without access to an editor with auto-complete.
 If( 1 = 0 );
@@ -308,17 +308,17 @@ While( nCubeDelimIndex <> 0 );
     Endif;
   End;
 End;
+
+### end Prolog ###
 573,3
 
 #****Begin: Generated Statements***
 #****End: Generated Statements****
-574,5
+574,3
 
 #****Begin: Generated Statements***
 #****End: Generated Statements****
-
-
-575,28
+575,27
 
 #****Begin: Generated Statements***
 #****End: Generated Statements****
@@ -326,7 +326,6 @@ End;
 ################################################################################################# ####################
 ##~~Join the bedrock TM1 community on GitHub https://github.com/cubewise-code/bedrock Ver 4.0~~##
 ################################################################################################# 
-
 
 ### Return code & final error message handling
 If( nErrors > 0 );

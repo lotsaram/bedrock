@@ -4,7 +4,7 @@
 586,"D:\TM1Models\Bedrock.v4\Log\Currency Currency 2_Export.csv"
 585,"D:\TM1Models\Bedrock.v4\Log\Currency Currency 2_Export.csv"
 564,
-565,"vjMHRBcfOwU\X1eLPnf9Q4y6s_tWiBeDZ2XRDS2zts;<Fwwth7`Uz8Vfa6SaeqfQ:A5l7Hb=L?oKAo4m2X2f0JYBvm;G8wwVyD4=vxX0ne<]suB^4AFu>_hY>vZ[ef:k~jht9JQ\JPIN`@50:n0]u8>hk2MDs6N73agPRDXPdE""OCTNb]mnhHbNAjRuO4a|s@OdmbM"
+565,"yFI821uqqGeOeGJn]LD99dgB0yYB_SnFZKRZclZ6he^8Gv7=1@mu2p0r\=SAoIca52maw8vERjnO^A?[H>t\onWpaSo[KUvCRjX9][JQEgrHDvwBN6TEDUECGBC=VuY\]qJfDgTkKlgFNMg;pia3MO>v6b5lP8fi:rd_GUX4tAhv""Oo_ucyEkbxVGB;D_DTb\2l?nd?N"
 559,1
 928,0
 593,
@@ -398,7 +398,7 @@ DatasourceAsciiDelimiter= pDelim;
 DatasourceAsciiQuoteCharacter = pQuote;
 
 ##### End Prolog #####
-573,85
+573,87
 #****Begin: Generated Statements***
 #****End: Generated Statements****
 
@@ -484,7 +484,9 @@ ELSEIF( V1 @= 'P' );
         LogOutput( 'INFO', Expand( cMsgErrorContent ) );  
     ENDIF;
 ENDIF;
-574,58
+
+### End Metadata ###
+574,60
 #****Begin: Generated Statements***
 #****End: Generated Statements****
 
@@ -543,6 +545,8 @@ IF( V1 @= 'V' );
         ENDIF;        
     ENDIF;
 ENDIF;
+
+### End Data ###
 575,50
 #****Begin: Generated Statements***
 #****End: Generated Statements****
@@ -579,7 +583,7 @@ ElseIf( FileExists(pSrcDir | sLocAttFile) = 1 );
         'pCube', '}LocalizedElementAttributes_' | pDim, 'pSrcDir', pSrcDir, 'pSrcFile', sLocAttFile,
         'pDim', '', 'pSrcEle', '', 'pTgtEle', '', 'pTitleRows', 1,
         'pDelim', pDelim, 'pQuote', pQuote, 'pDecimalSeparator', DatasourceASCIIDecimalSeparator, 'pThousandSeparator', DatasourceASCIIThousandSeparator, 
-        'pCumulate', 0, 'pCubeLogging', 2, 'pSandbox', '', 'pZeroFilter', 0, 'pMappingToNewDims', '',
+        'pCumulate', 0, 'pSandbox', '', 'pZeroFilter', 0, 'pMappingToNewDims', '',
         'pDimDelim', '&', 'pEleStartDelim', '¦', 'pEleDelim', '+',
         'pCharacterSet', '', 'pFileDelete', 0, 'pSkipInvalidRecords', 1
     );

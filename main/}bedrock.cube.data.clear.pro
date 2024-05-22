@@ -4,7 +4,7 @@
 586,
 585,
 564,
-565,"ogVY4eUooQ888n@awk<T:f[u1`tD3z@pBYDORz9;IVi\VTY[N=5R=gDN9EwtoAoWpi>:mL[@bbHo>KeAr`siOFHgAfxUeFTUe1U9h;U5xU6l92>;8?U<nheGEO2qRcg]x8rhnMaT[_g^SEm=fvYh\wZAX8rSg9qvfl8aI5lWKVZTlaKB8a5\0E4v=4L1m8rBGpM^??>R"
+565,"j6NOJoMeVzaq9NSjvWc_ATTTT5c9kjY6Y:uk8`SGh0^D?:osK_VVjt]4_SV>zCrHG9R94<3Q6\^Y\NOa2ziLM]EAhXMI5aS_j;^s]7zQ68Qp@tDKH?AzY1VEwK?vsH]ArZLaB4>\YllX<NCh5e\>32_WMtdYPmqMQ0\zDD8E6wJXvk\onO?tM]Bt>e:BYjMlKXwFzJvX"
 559,1
 928,0
 593,
@@ -476,7 +476,7 @@ While( nCubeDelimiterIndex <> 0 );
             RunProcess( cThisProcName, 'pLogoutput', pLogoutput,
         	    'pCube', pCube, 'pView', pView, 'pFilter', sFilter, 'pFilterParallel', '', 
         	    'pDimDelim', pDimDelim, 'pEleStartDelim', pEleStartDelim, 'pEleDelim', pEleDelim, 
-        	    'pSuppressConsolStrings', pSuppressConsolStrings, 'pCubeLogging', pTemp, 'pSandbox', pSandbox
+        	    'pSuppressConsolStrings', pSuppressConsolStrings, 'pTemp', pTemp, 'pSandbox', pSandbox
         	  );
         	  nThreadElCounter = 0;
         	  sFilter = '';

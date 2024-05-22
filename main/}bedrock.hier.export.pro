@@ -4,7 +4,7 @@
 586,"}Cubes"
 585,"}Cubes"
 564,
-565,"l=MOGhSJ`8PzaY=EpKi0jzgkzsUl<R2tGkdyI<A74LogFh3GP`Xgsx0\0b:22<dvQyWeA^llVRZdh2\Le?7y6AE<xvL6e=1G2]BCUTfjC22a]^t0L6QGPmTjTvg?vQb0dcJVCY>5EcubcpXQ2<`vwfJeZNlsDY\\jdXmSEWHTjLjq6ydhRsKXhEP8]_^=amvUXf2Azc3"
+565,"x51N@jM<^a=ZRbBt>o]fnsF2aMv9fPWKrW[BWTjxHL4u=o?cu9qfiZWg10bgESJd?Y2@uf?b>^^Fw<piQNb<@3D]P1=stBA_g3YZF0A6wWGky460a4<ae>uNX_EF6GsUFu:FjC1hE2P_8cf8BN]dgrju3<S@uhkf1Tmd>aOT?ae4KMvB_^QaKIUQO=bOypyBwOCXO?\b"
 559,1
 928,0
 593,
@@ -438,7 +438,7 @@ ElseIf( CubeExists('}LocalizedElementAttributes_' | pDim) = 1 );
         'pCube', '}LocalizedElementAttributes_' | pDim, 'pView', '', 'pFilter', '', 'pFilterParallel', '', 'pParallelThreads', 0,
         'pDimDelim', '&', 'pEleStartDelim', '¦', 'pEleDelim', '+',
         'pSuppressZero', 1, 'pSuppressConsol', 0, 'pSuppressRules', 0, 'pSuppressConsolStrings', 0,
-        'pZeroSource', 0, 'pCubeLogging', 2, 'pTemp', 1, 
+        'pZeroSource', 0, 'pTemp', 1, 
         'pFilePath', pTgtDir, 'pFileName', sLocAttFile,
         'pDelim', pDelim, 'pDecimalSeparator', DatasourceASCIIDecimalSeparator, 'pThousandSeparator', DatasourceASCIIThousandSeparator, 'pQuote', pQuote,
         'pTitleRecord', 1, 'pSandbox', '', 'pSubN', 0, 'pCharacterSet', '', 'pCubeNameExport', 1
