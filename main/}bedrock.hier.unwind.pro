@@ -4,7 +4,7 @@
 586,"}Cubes"
 585,"}Cubes"
 564,
-565,"wG<[0r>wEzymj`d\jFLCvFXaI;s=Yw?Hi>G;YWkw=uf=V?4DLas\hYEfjUV;F5iRP?H3Skxxwbgp5\v^p\[bxyA7BlI0P;b_PPK6;77tLopNAux3L@C:[;JMJ?H[NH>g@T?5UksHer2>sbCyF750l[B[6t>1r2BV\:]ZKtKyWugt<cCKTy_`MTLsPnP:q`heF890c:wf"
+565,"uXqRGM>1hXE0;ct]Cb7TXaDXg:G2mdZuSqNOjSDyvk7yjeAG_t8zD2OExkin=4i\GbF30k1ET;FDvll\WWxfsBw`QqcDV8e>2Bc8`9EqbA3IHiTfRUBTY5YO0ym@RCqKbi0v;:kCnIpDfc0hxkIXn>\8LmS2F0TmNq@n9Fq`04N9>yb]IYy4\zUG<UHV>Z7ho?\A5Hqi"
 559,1
 928,0
 593,
@@ -70,7 +70,7 @@ vElement
 582,1
 VarType=32ColType=827
 603,0
-572,407
+572,403
 #Region CallThisProcess
 # A snippet of code provided as an example how to call this process should the developer be working on a system without access to an editor with auto-complete.
 If( 1 = 0 );
@@ -219,10 +219,6 @@ If( Scan( '*', pDim ) = 0 & Scan( '?', pDim ) = 0 & Scan( pDelim, pDim ) = 0 & S
 
     ### Turn-off Logging in the Attribute cube
     sAttrCube = '}ElementAttributes_' | pDim;
-    If( CubeExists( sAttrCube ) = 1 );
-        nLogging = CubeGetLogChanges( sAttrCube );
-        CubeSetLogChanges( sAttrCube, 0 );
-    EndIf;
     
     ### Create Temp Descendent Attribute
     AttrDelete( pDim, cHierAttr );
@@ -546,7 +542,7 @@ EndIf;
 #****Begin: Generated Statements***
 #****End: Generated Statements****
 
-575,50
+575,41
 
 #****Begin: Generated Statements***
 #****End: Generated Statements****
@@ -566,15 +562,6 @@ Else;
     ### Remove Descendent attribute
     IF( Scan( '*', pDim ) = 0 &  Scan( '?', pDim ) = 0 & Scan( pDelim, pDim ) = 0 & Scan( '*', pHier ) = 0 & Scan( '?', pHier ) = 0 & Scan( pDelim, pHier ) = 0 & Scan( '*', pConsol ) = 0 & Scan( '?', pConsol ) = 0 & Scan( pDelim, pConsol ) = 0 );
       AttrDelete( pDim, cHierAttr );
-    EndIf;
-EndIf;
-
-### Reset Logging in the Attribute cube
-IF( Scan( '*', pDim ) = 0 & Scan( '?', pDim ) = 0 & Scan( pDelim, pDim ) = 0 & Scan( '*', pHier ) = 0 & Scan( '?', pHier ) = 0 & Scan( pDelim, pHier ) = 0 & Scan( '*', pConsol ) = 0 & Scan( '?', pConsol ) = 0 & Scan( pDelim, pConsol ) = 0 );
-    If( CubeExists( sAttrCube ) = 1 );
-        If( nLogging = 1 );
-            CubeSetLogChanges( sAttrCube, 1 );
-        EndIf;
     EndIf;
 EndIf;
 

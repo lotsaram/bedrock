@@ -4,7 +4,7 @@
 586,
 585,
 564,
-565,"sP?lswkLDI1M@C0=VCUaBr=N>fOTutdN59`uP?zAY@G4;2HF>Dm8oRJN:fZQAUGuT74Q5`R?dVuNlgGtM[RK_TlfJXzF7yMu4j7AQ<3o@2@rbS0@Rxe\o_XJw5LXvn5d7e^1_eiWqjEGDpjp<9z_e=AF<i]ahDVw[Ho6O@[GYnTE1keli]=G5NOQB4py`^h5t:]MY<E^"
+565,"ogx0Lm07hFl2_qzaBnKV7cO1e0WY402JmOYO;8_KxMxLS5`kOEk:U67:3bZzR^3<T9_P8x<@2F47VzWb2Z5<_]:qtg6VeL2`[00zMSHy^LPNIBXD8LLnvPuNQH?<X[[R?Pi4^Nsq=5dbOUE?T9_ztG3lL4xcSg9MF[tINXv;_RFBoQUp<cK9eZ7`4XLu8R=<VT1JQ`4k"
 559,1
 928,0
 593,
@@ -48,7 +48,7 @@ pTemp,"Use temporary objects for views & subsets?"
 581,0
 582,0
 603,0
-572,183
+572,177
 ################################################################################################# 
 ##~~Join the bedrock TM1 community on GitHub https://github.com/cubewise-code/bedrock Ver 4.0~~##
 ################################################################################################# 
@@ -169,12 +169,6 @@ EndIf;
 
 ################################################################################################# 
 #EndRegion Validate Parameters
-
-### If required switch transaction logging off (this should be done AFTER the escape/reject if parameters fail validation and BEFORE the zero out commences)
-nCubeLogChanges = CubeGetLogChanges( cCubeTgt );
-CubeSetLogChanges( cCubeTgt, 0 );
-
-
 ################################################################################################# 
 #Region - ZeroOut
 
@@ -232,7 +226,7 @@ EndIf;
 ################################################################################################# 
 
 ### End Prolog ###
-573,7
+573,8
 #****Begin: Generated Statements***
 #****End: Generated Statements****
 
@@ -240,7 +234,8 @@ If( pLogOutput >= 1 );
    nMetadataRecordCount = nMetadataRecordCount + 1;
 EndIf;
 
-574,7
+### End Metadata ###
+574,8
 #****Begin: Generated Statements***
 #****End: Generated Statements****
 
@@ -248,16 +243,14 @@ If( pLogOutput >= 1 );
    nDataRecordCount = nDataRecordCount + 1;
 EndIf;
 
-575,29
+### End Data ###
+575,26
 ################################################################################################# 
 ##~~Join the bedrock TM1 community on GitHub https://github.com/cubewise-code/bedrock Ver 4.0~~##
 ################################################################################################# 
 
 #****Begin: Generated Statements***
 #****End: Generated Statements****
-
-### If required switch transaction logging back on 
-CubeSetLogChanges( cCubeTgt, nCubeLogChanges );
 
 ### Return code & final error message handling
 If( nErrors > 0 );

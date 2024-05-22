@@ -4,7 +4,7 @@
 586,"}Cubes"
 585,"}Cubes"
 564,
-565,"i6lEGh@Z^yJmI;9poECvz1ObeN;N97Vy6>nJny[FPX3HaDX@PZ@?N9?m]ZYQ\?b6pEyxUtU0uRudKUaGX@>:eL[uRrIihqk\G^G7}zyFlgal6ZB\vrS=1U<c6\`4`f7cQZ3DKT?asYJ-_@MPhac:}xK_B:[h[=hBs:kue_]evQE\et2;R_b_V>2^8gRdIen]7ufOAmy:"
+565,"hq1mL3deyD7]NORxBcTbCrS7Hs2:wDktF11\<frCWlv4zHh6[Vi22QdjaQYacZoVsg=sEQdvlqs48W1J06AQspa0T\GI7WnHemq<MYH]``Z]eTG\V>Q@[HdOxMv:fF9s=PcGkpXWzWa!OnaT8`E:MOWm^:UnQLwzK5nE[tS5MF4a`4l;>UE9V9Rx859bMonYW0eXJrH\"
 559,1
 928,0
 593,
@@ -82,7 +82,7 @@ vElement
 582,1
 VarType=32ColType=827
 603,0
-572,202
+572,193
 #Region CallThisProcess
 # A snippet of code provided as an example how to call this process should the developer be working on a system without access to an editor with auto-complete.
 If( 1 = 0 );
@@ -247,10 +247,6 @@ AttrInsert( pSrcDim, '', cHierAttr, 'S' );
 
 # Disable excessive transaction logging of the attributes cube if it is logged
 sAttrCube = '}ElementAttributes_' | pSrcDim;
-nAttrCubeLogChanges = CubeGetLogChanges(sAttrCube);
-If( nAttrCubeLogChanges = 1 );
-   CubeSetLogChanges( sAttrCube, 0 );
-EndIf;
 
 nIndex = 1;
 nLimit = HierarchySubsetGetSize( pSrcDim, pSrcHier, pSubset );
@@ -261,11 +257,6 @@ WHILE( nIndex <= nLimit);
     HierarchyElementInsert(pTgtDim, pTgtHier, '',sElName, sELType);
     nIndex = nIndex + 1;
 END;
-
-# Re-enable transaction logging setting of the attributes cube if required
-If( nAttrCubeLogChanges = 1 );
-   CubeSetLogChanges( sAttrCube, 1 );
-EndIf;
 
 ### Replicate Attributes ###
 # Note: DType on Attr dim returns "AS", "AN" or "AA" need to strip off leading "A"
