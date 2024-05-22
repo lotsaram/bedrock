@@ -4,7 +4,7 @@
 586,"}Cubes"
 585,"}Cubes"
 564,
-565,"x51N@jM<^a=ZRbBt>o]fnsF2aMv9fPWKrW[BWTjxHL4u=o?cu9qfiZWg10bgESJd?Y2@uf?b>^^Fw<piQNb<@3D]P1=stBA_g3YZF0A6wWGky460a4<ae>uNX_EF6GsUFu:FjC1hE2P_8cf8BN]dgrju3<S@uhkf1Tmd>aOT?ae4KMvB_^QaKIUQO=bOypyBwOCXO?\b"
+565,"vLd;[huJt[CPrS7:fd4wAsaQny_ZK8yS^mR6y=I1>JMt\3v<UedyPRhku`:I7QwwlRHUVkLllY]I2XIMguYThJ?_<miL0ihFX:7ZE^<jOZ1s_;M_Md^VcSRhzAmAfFh^h?DLc\WPB?3>c@D=;HaN1\KiMU3ARQxX5h4WjxKgW0tLD[t=peOWZIMMxsk18uvemNB_8OMS"
 559,1
 928,0
 593,
@@ -86,7 +86,7 @@ vEle
 582,1
 VarType=32ColType=827
 603,0
-572,224
+572,223
 #Region CallThisProcess
 # A snippet of code provided as an example how to call this process should the developer be working on a system without access to an editor with auto-complete.
 If( 1 = 0 );
@@ -149,7 +149,6 @@ cTempSub        = cThisProcName |'_'| cTimeStamp |'_'| cRandomInt;
 cMsgErrorLevel  = 'ERROR';
 cMsgErrorContent= 'Process:%cThisProcName% ErrorMsg:%sMessage%';
 cLogInfo        = 'Process:%cThisProcName% run with parameters pDim:%pDim%, pHier:%pHier%, pTgtDir:%pTgtDir%, pTgtFile:%pTgtFile%, pTitleRecord:%pTitleRecord%, pDelim:%pDelim%, pQuote:%pQuote%, pLegacy:%pLegacy%.';
-cCubeS1         = '}DimensionProperties';
 cType           = 'Type-';
 cParent         = 'Parent-';
 cIndex          = 'Index-';
@@ -316,7 +315,7 @@ DatasourceAsciiQuoteCharacter = pQuote;
 #****Begin: Generated Statements***
 #****End: Generated Statements****
 
-574,96
+574,97
 
 #****Begin: Generated Statements***
 #****End: Generated Statements****
@@ -341,15 +340,16 @@ If( nRecordCount = 1 & pTitleRecord = 1 );
     TextOutput( sFilename, pDim, sHier  );
 
 ## Line 3: Sort Order Information
-    sSortElementType    = CELLGETS( cCubeS1, pDim, 'SORTELEMENTSTYPE' );
-    sSortComponentType  = CELLGETS( cCubeS1, pDim, 'SORTCOMPONENTSTYPE' );
-    sSortElementSense   = CELLGETS( cCubeS1, pDim, 'SORTELEMENTSSENSE' );
-    sSortComponentSense = CELLGETS( cCubeS1, pDim, 'SORTCOMPONENTSSENSE' );
-    If( pLegacy = 1 );
-        TextOutput( sFilename, sSortElementType , sSortComponentType , sSortElementSense , sSortComponentSense  );
-    Else;
-        TextOutput( sFilename, 'Sort parameters :', sSortElementType , sSortComponentType , sSortElementSense , sSortComponentSense  );
-    EndIf;
+# Placeholder as expecting a TI function to be made available to be able to read these properties
+#    sSortElementType    = CELLGETS( cCubeS1, pDim, 'SORTELEMENTSTYPE' );
+#    sSortComponentType  = CELLGETS( cCubeS1, pDim, 'SORTCOMPONENTSTYPE' );
+#    sSortElementSense   = CELLGETS( cCubeS1, pDim, 'SORTELEMENTSSENSE' );
+#    sSortComponentSense = CELLGETS( cCubeS1, pDim, 'SORTCOMPONENTSSENSE' );
+#    If( pLegacy = 1 );
+#        TextOutput( sFilename, sSortElementType , sSortComponentType , sSortElementSense , sSortComponentSense  );
+#    Else;
+#        TextOutput( sFilename, 'Sort parameters :', sSortElementType , sSortComponentType , sSortElementSense , sSortComponentSense  );
+#    EndIf;
     
 ## Line 4 (and 5?): Header Information
     If( pLegacy = 1 );

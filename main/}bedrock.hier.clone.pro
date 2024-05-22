@@ -4,7 +4,7 @@
 586,"}Cubes"
 585,"}Cubes"
 564,
-565,"wleeZe@zs7:tX9hx?u8=<0FaW__6<f1[8>oO_IW\i]GERwH5<CKC8MK:DxAhiO02`qR6];6X4ttLeDRQoRBwuVJqM3ci>`Hw`6q9e0r_mjF4dnqAvM0p`FzSI9dbQewiAIAJZ:9z]onUjR5yxbZv@p]FnptevOM8bUkkO_:U`O0w2PB^a5Co7ez`=R<qM4KckFPCuRxl"
+565,"cjeaSXn_?;u1woD79VY4QAj`k_<kOea7u_4[1tMQJi:SgIm`k4CR@:XX09aLwc`r;L\;>^6_`uqLYQrZHZQdUX@w9j7eBtxtDX0lrq=YZ5`mbT0?Q`4r@^Om`GlEMx`S1M3AgPj4Gh3tLEd]VEAif=s86IwKpViuBKQB7uYyinycKeF7?Ou[ldS]_9E:l8O8_Bd?iBd<"
 559,1
 928,0
 593,
@@ -74,7 +74,7 @@ vEle
 582,1
 VarType=32ColType=827
 603,0
-572,227
+572,225
 #Region CallThisProcess
 # A snippet of code provided as an example how to call this process should the developer be working on a system without access to an editor with auto-complete.
 If( 1 = 0 );
@@ -254,12 +254,10 @@ If(pSrcDim @=pSrcHier);
  Endif;
   
 ### Set the target Sort Order ###
-sSortElementsType     = CELLGETS( '}DimensionProperties', sDimHier, 'SORTELEMENTSTYPE');
-sSortElementsSense    = CELLGETS( '}DimensionProperties', sDimHier, 'SORTELEMENTSSENSE');
-sSortComponentsType   = CELLGETS( '}DimensionProperties', sDimHier, 'SORTCOMPONENTSTYPE');
-sSortComponentsSense  = CELLGETS( '}DimensionProperties', sDimHier, 'SORTCOMPONENTSSENSE');
+# CellGetS to }DimensionProperties cube removed
+# Placeholder as expecting a TI function to be made available to be able to read these properties
 
-HierarchySortOrder(pTgtDim, pTgtHier, sSortComponentsType, sSortComponentsSense, sSortElementsType , sSortElementsSense);
+#HierarchySortOrder(pTgtDim, pTgtHier, sSortComponentsType, sSortComponentsSense, sSortElementsType , sSortElementsSense);
 
 nSourceHierSize = DimSiz(pSrcDim|':'|pSrcHier);
 
@@ -429,7 +427,7 @@ If( pAttr = 1 & DimensionExists( sAttrDim ) = 1 );
 EndIf;
 
 ### End Data ###
-575,54
+575,52
 
 #****Begin: Generated Statements***
 #****End: Generated Statements****
@@ -446,10 +444,8 @@ Else;
 EndIf;
 
 ### Set the target Sort Order ###
-  CELLPUTS( sSortElementsType, '}DimensionProperties', sTargetDimHier, 'SORTELEMENTSTYPE');
-  CELLPUTS( sSortElementsSense, '}DimensionProperties', sTargetDimHier, 'SORTELEMENTSSENSE');
-  CELLPUTS( sSortComponentsType, '}DimensionProperties',sTargetDimHier, 'SORTCOMPONENTSTYPE');
-  CELLPUTS( sSortComponentsSense, '}DimensionProperties', sTargetDimHier, 'SORTCOMPONENTSSENSE');
+# CellPutS to }DimensionProperties cube removed
+# Placeholder as expecting a TI function to be made available to be able to modify these properties
   
 ### If a new dimension has been created, call the process recursively to clone the alternate hierarchy, after the same named hierarchy has been processed
 If( nProcessSameNamedHier = 1 );

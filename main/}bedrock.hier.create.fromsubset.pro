@@ -4,7 +4,7 @@
 586,"}Cubes"
 585,"}Cubes"
 564,
-565,"hq1mL3deyD7]NORxBcTbCrS7Hs2:wDktF11\<frCWlv4zHh6[Vi22QdjaQYacZoVsg=sEQdvlqs48W1J06AQspa0T\GI7WnHemq<MYH]``Z]eTG\V>Q@[HdOxMv:fF9s=PcGkpXWzWa!OnaT8`E:MOWm^:UnQLwzK5nE[tS5MF4a`4l;>UE9V9Rx859bMonYW0eXJrH\"
+565,"fH2F=nyEUz?Z0TaDIAEnbI0gHEmrVj=uVC>NIy?28R:lvJHUzybLz:djIRY1e0dFy4rpeSOu_[v4^RQca1yK<_z]PxJI4hWX4Mx=m^[1L5\:P4C\fHp3y\fEPW?p`V=b6QCKKys1xRA!OV=Xx4a=MwSyiGnH@IDvz0c5UnU5@hF`l4A9OVYG17rk=?@mSc~Q7>JNZTd`"
 559,1
 928,0
 593,
@@ -380,7 +380,7 @@ If( pAttr = 1 );
   EndIf;
 
 ### End Data ###
-575,91
+575,44
 
 #****Begin: Generated Statements***
 #****End: Generated Statements****
@@ -398,54 +398,7 @@ Else;
     sTargetElement = pTgtDim|':'|pTgtHier;
 Endif;
 
-sCube = '}DimensionProperties';
-IF(CubeExists ( sCube ) = 1 );
-  sEleMapping = '}Dimensions' |'¦'|sSourceElement|'->'|sTargetElement;
-  ExecuteProcess( '}bedrock.cube.data.copy',
-  'pLogOutput', pLogOutput,
-  'pStrictErrorHandling', pStrictErrorHandling,
-  'pCube', sCube,
-  'pSrcView', '',
-  'pTgtView', '',
-  'pFilter',  '',
-  'pEleMapping', sEleMapping,
-  'pMappingDelim','->',
-  'pFactor', 1,
-  'pDimDelim', '&',
-  'pEleStartDelim', '¦',
-  'pEleDelim', '+',
-  'pSuppressRules', 0 ,
-  'pCumulate', 0 ,
-  'pZeroSource', 0, 
-  'pZeroTarget', 1,
-  'pTemp', 1
-   );
-ENDIF;
-  
-sCube = '}HierarchyProperties';
-IF(CubeExists ( sCube ) = 1 );
-  sEleMapping = '}Dimensions' |'¦'|sSourceElement|'->'|sTargetElement;
-  ExecuteProcess( '}bedrock.cube.data.copy',
-  'pLogOutput', pLogOutput,
-  'pStrictErrorHandling', pStrictErrorHandling,
-  'pCube', sCube,
-  'pSrcView', '',
-  'pTgtView', '',
-  'pFilter',  '',
-  'pEleMapping', sEleMapping,
-  'pMappingDelim','->',
-  'pFactor', 1,
-  'pDimDelim', '&',
-  'pEleStartDelim', '¦',
-  'pEleDelim', '+',
-  'pSuppressRules', 0 ,
-  'pCumulate', 0 ,
-  'pZeroSource', 0, 
-  'pZeroTarget', 1,
-  'pTemp', 1
-   );
-ENDIF;
-
+# Placeholder for copying dimension order and captions from source to target as expecting a TI function to be made available to be able to read & modify these properties
 
 ### Set Descendent attribute value
 AttrDelete( pSrcDim, cHierAttr );

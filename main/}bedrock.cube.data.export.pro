@@ -4,7 +4,7 @@
 586,"}APQ Staging TempSource"
 585,"}APQ Staging TempSource"
 564,
-565,"nhjjT[4qp\R[wua2CHBm204Vz`9bGSX<R_K_D3O>guS]rZUE^^7a@p]mV_SWe`@OupKoq_^nIaw0sMWf87drDTzPUGF0j6iWt@w4?UduNd=f>9=QD]WkyIY?Ra3gOQXSyN2d`i1_j1?G8xLMApD_3dg^wU;2sbEplo\PPQ5zs_r[D;l_o_s]N_<^h>tE5SLFW63Bbag0"
+565,"sxFUWZAZUUpXYouJLT1a5[eJ8=xm;qCa<V9<qUoMMT@>0dcNNzDXlii;qxSq[5xU_ml4?950k^zzuAFfrBVQNg]voJbr@2LVu3f<Wb`GzfgeWTqnpa:VT=x[pL@IQ6XyUchur;9>u<yMm8N5`h0hfG9GZUv=R4gwng@1_:WyE5[Uh=p?xiQ0P4ExUB_mQEWsdQK`5>xc"
 559,1
 928,0
 593,
@@ -754,7 +754,7 @@ VarType=32ColType=827
 VarType=32ColType=827
 VarType=32ColType=827
 603,0
-572,482
+572,477
 #Region CallThisProcess
 # A snippet of code provided as an example how to call this process should the developer be working on a system without access to an editor with auto-complete.
 If( 1 = 0 );
@@ -830,11 +830,6 @@ pDecimalSeparator = TRIM(pDecimalSeparator);
 pThousandSeparator= TRIM(pThousandSeparator);
 nDataCount        = 0;
 nErrors           = 0;
-
-## Capture current transaction logging state
-If( CubeExists(pCube) = 1 );
-  sCubeLogging = CellGetS('}CubeProperties', pCube, 'LOGGING' );
-EndIf;
 
 ## Default filter delimiters
 If( pDimDelim     @= '' );

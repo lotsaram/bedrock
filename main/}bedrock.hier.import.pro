@@ -4,7 +4,7 @@
 586,"D:\TM1Models\Bedrock.v4\Log\Currency Currency 2_Export.csv"
 585,"D:\TM1Models\Bedrock.v4\Log\Currency Currency 2_Export.csv"
 564,
-565,"yFI821uqqGeOeGJn]LD99dgB0yYB_SnFZKRZclZ6he^8Gv7=1@mu2p0r\=SAoIca52maw8vERjnO^A?[H>t\onWpaSo[KUvCRjX9][JQEgrHDvwBN6TEDUECGBC=VuY\]qJfDgTkKlgFNMg;pia3MO>v6b5lP8fi:rd_GUX4tAhv""Oo_ucyEkbxVGB;D_DTb\2l?nd?N"
+565,"ayn0LVgHj;Z@[3WUow@K7sg33h=;unII:R8LZDiU?CxbMuGW=EbuOWseR6SqiziQExCjwMogUUn_rAOS9E89Sp<Dc_eKaVauc]\:]\w`DIP226B>O8Q7Ok78s>m[uQ1Au:m4]qR3e<ENBm3`PP1M<Wj<hINniE5t:lofj^dRv78*ozp0>CSvoXfR4GqIFdalJZy?7iX"
 559,1
 928,0
 593,
@@ -116,7 +116,7 @@ VarType=32ColType=827
 VarType=32ColType=827
 VarType=32ColType=827
 603,0
-572,281
+572,280
 #Region CallThisProcess
 # A snippet of code provided as an example how to call this process should the developer be working on a system without access to an editor with auto-complete.
 If( 1 = 0 );
@@ -386,7 +386,6 @@ EndIf;
 
 ### CONSTANTS ###
 sAttrDimName    = '}ElementAttributes_' | pDim ;
-cCubeS1         = '}DimensionProperties';
 
 #Processbreak;
 
@@ -398,7 +397,7 @@ DatasourceAsciiDelimiter= pDelim;
 DatasourceAsciiQuoteCharacter = pQuote;
 
 ##### End Prolog #####
-573,87
+573,88
 #****Begin: Generated Statements***
 #****End: Generated Statements****
 
@@ -430,20 +429,21 @@ sVar3 = If( pLegacy <> 1, Subst( v3 , Scan( '-' , v3 ) + 1 , Long( v3 ) ), v3 );
 sVar4 = If( pLegacy <> 1, Subst( v4 , Scan( '-' , v4 ) + 1 , Long( v4 ) ), v4 );
 sVar5 = If( pLegacy <> 1, Subst( v5 , Scan( '-' , v5 ) + 1 , Long( v5 ) ), v5 );
 
-## Set Dimension Sort Order
-IF( v1 @= 'Sort parameters :' );
-    CELLPUTS( sVar2, cCubeS1 , sDim, 'SORTELEMENTSTYPE' );
-    CELLPUTS( sVar3, cCubeS1 , sDim, 'SORTCOMPONENTSTYPE' );
-    CELLPUTS( sVar4, cCubeS1 , sDim, 'SORTELEMENTSSENSE' );
-    CELLPUTS( sVar5, cCubeS1 , sDim, 'SORTCOMPONENTSSENSE' );
-    DimensionSortOrder( sDim, sVar3, sVar5, sVar2, sVar4 );
-ElseIF( pLegacy = 1 & nDataCount = 3 & ( sVar1 @= 'BYINPUT' % sVar1 @= 'BYNAME' % sVar1 @= 'BYHIERARCHY' % sVar1 @= 'BYLEVEL' ) );
-    CELLPUTS( sVar1, cCubeS1 , sDim, 'SORTELEMENTSTYPE' );
-    CELLPUTS( sVar2, cCubeS1 , sDim, 'SORTCOMPONENTSTYPE' );
-    CELLPUTS( sVar3, cCubeS1 , sDim, 'SORTELEMENTSSENSE' );
-    CELLPUTS( sVar4, cCubeS1 , sDim, 'SORTCOMPONENTSSENSE' );
-    DimensionSortOrder( sDim, sVar2, sVar4, sVar1, sVar3 );
-ENDIF;
+# Placeholder as expecting a TI function to be made available to be able to read & modify these properties
+### Set Dimension Sort Order
+#IF( v1 @= 'Sort parameters :' );
+#    CELLPUTS( sVar2, cCubeS1 , sDim, 'SORTELEMENTSTYPE' );
+#    CELLPUTS( sVar3, cCubeS1 , sDim, 'SORTCOMPONENTSTYPE' );
+#    CELLPUTS( sVar4, cCubeS1 , sDim, 'SORTELEMENTSSENSE' );
+#    CELLPUTS( sVar5, cCubeS1 , sDim, 'SORTCOMPONENTSSENSE' );
+#    DimensionSortOrder( sDim, sVar3, sVar5, sVar2, sVar4 );
+#ElseIF( pLegacy = 1 & nDataCount = 3 & ( sVar1 @= 'BYINPUT' % sVar1 @= 'BYNAME' % sVar1 @= 'BYHIERARCHY' % sVar1 @= 'BYLEVEL' ) );
+#    CELLPUTS( sVar1, cCubeS1 , sDim, 'SORTELEMENTSTYPE' );
+#    CELLPUTS( sVar2, cCubeS1 , sDim, 'SORTCOMPONENTSTYPE' );
+#    CELLPUTS( sVar3, cCubeS1 , sDim, 'SORTELEMENTSSENSE' );
+#    CELLPUTS( sVar4, cCubeS1 , sDim, 'SORTCOMPONENTSSENSE' );
+#    DimensionSortOrder( sDim, sVar2, sVar4, sVar1, sVar3 );
+#ENDIF;
 
 ### Build dimension
 IF( V1 @= 'A' );

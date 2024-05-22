@@ -4,7 +4,7 @@
 586,"}Cubes"
 585,"}Cubes"
 564,
-565,"obisvT2=OYnLU5Wa4zj0`Bg\gqzNpCvl[oUG:j1DCO>t:B:4Y[By>HeE8kGL1M_b5IF3jsdTAoXDPR0f9ByG]tO<52w]kLxgABs7:F2jqaUKH^K5r<j6zIEng@k\tEHUUEH0=U8JFvXpyyCJi59\\WFlKr\\>A5KuRM>WzswPF2R[s8`ko8Y8Dm[]^I=c\a;KkK]Y@jr"
+565,"b?aapKl`U7>gMeSyUCzq_fQ7`^s9:xAXXF[i_oH_aBsy22pp5TscS\hob:XSIQzCnZ50MQ;81XsXvImiKmZW\r[WR]1S2EGLFJ_t\g]SUDxJAtMqYo7WH^\1[F<M2Rxy1E0Q@apNTmtL\z3?W3;oe5x`?qv3rDWw[I^jl[=[\ghBa5<0?@q4D\vz0A?dA>NcNn>zK3Sv"
 559,1
 928,0
 593,
@@ -78,7 +78,7 @@ vEle
 582,1
 VarType=32ColType=827
 603,0
-572,183
+572,179
 #Region CallThisProcess
 # A snippet of code provided as an example how to call this process should the developer be working on a system without access to an editor with auto-complete.
 If( 1 = 0 );
@@ -205,13 +205,10 @@ Else;
 EndIf;
 
 ### Set the target Sort Order ###
-sSortElementsType     = CELLGETS( '}DimensionProperties', pSrcDim, 'SORTELEMENTSTYPE');
-sSortElementsSense    = CELLGETS( '}DimensionProperties', pSrcDim, 'SORTELEMENTSSENSE');
-sSortComponentsType   = CELLGETS( '}DimensionProperties', pSrcDim, 'SORTCOMPONENTSTYPE');
-sSortComponentsSense  = CELLGETS( '}DimensionProperties', pSrcDim, 'SORTCOMPONENTSSENSE');
+# CellGetS to }DimensionProperties cube removed
+# Placeholder as expecting a TI function to be made available to be able to read these properties
 
-DimensionSortOrder( pTgtDim, sSortComponentsType, sSortComponentsSense, sSortElementsType , sSortElementsSense);
-
+# DimensionSortOrder( pTgtDim, sSortComponentsType, sSortComponentsSense, sSortElementsType , sSortElementsSense);
 
 nSourceDimSize = DIMSIZ( pSrcDim );
 nIndex = 1;
@@ -259,7 +256,6 @@ If( pAttr = 1 & DimensionExists( sAttrDim ) = 1 );
     nCount = nCount + 1;
   End;
 EndIf;
-
 
 ### End Prolog ###
 573,34
@@ -400,7 +396,7 @@ If( pAttr = 1 & DimensionExists( sAttrDim ) = 1 );
 EndIf;
 
 ### End Data ###
-575,237
+575,235
 
 #****Begin: Generated Statements***
 #****End: Generated Statements****
@@ -411,10 +407,8 @@ EndIf;
 
 
 ### Set the target Sort Order ###
-  CELLPUTS( sSortElementsType, '}DimensionProperties', pTgtDim, 'SORTELEMENTSTYPE');
-  CELLPUTS( sSortElementsSense, '}DimensionProperties', pTgtDim, 'SORTELEMENTSSENSE');
-  CELLPUTS( sSortComponentsType, '}DimensionProperties', pTgtDim, 'SORTCOMPONENTSTYPE');
-  CELLPUTS( sSortComponentsSense, '}DimensionProperties', pTgtDim, 'SORTCOMPONENTSSENSE');
+# CellPutS to }DimensionProperties cube removed
+# Placeholder as expecting a TI function to be made available to be able to modify these properties
 
 ### Destroy Source Subset ###
 
