@@ -4,7 +4,7 @@
 586,
 585,
 564,
-565,"m^[k@obR?Q^RqaSmsgyzK[6jjHa=2qIdMft]2wzra1KkxG=xt2?5tqHu^ASoNDWLC0hp9aomW=^THIsQkw17^ayX8?][;wTnJGz0=bdC?>FNbZopBjlx<du=[hr@xEkPQs2n`Sb0LbumYrPINd2:\d?E;mgigbTyXZR_0jc?yF`BE8:sjXV8pIQ3HkzXl2FYePz2QVS`"
+565,"ipQsSV>wfaKcpwt?]Idv1>Ua8_sx^H]SOVy6PLcdT?@9`1M?ryvL?7sk5e^<`bH8ax\ONh2fK<OQ::n:23QAqYTt`Bm>yoJalbH[7Q?KS19Co67d;RMYcY`[jtvSiAr?rMt6d6K4yB[bkp<r_5>_dUE6zQdFmsZ`26]VCBWE5Os5u>po?F7tjO>Zq0Mu0UFIM4YWGc`Y"
 559,1
 928,0
 593,
@@ -46,7 +46,7 @@ pCtrlObj,0
 637,5
 pLogOutput,"OPTIONAL: Write parameters and action summary to server message log (Boolean True = 1)"
 pStrictErrorHandling,"OPTIONAL: On encountering any error, exit with major error status by ProcessQuit after writing to the server message log (Boolean True = 1)"
-pCube,"REQUIRED: List of Cubes to Delete (Separated by Delimiter, Accepts Wild card)"
+pCube,"REQUIRED: List of Cubes to Delete (Separated by Delimiter, Accepts wildcard)"
 pDelim,"OPTIONAL: Delimiter"
 pCtrlObj,"OPTIONAL: To Delete control cube 1=Delete control objects, 0=Do not delete control objects, Default value 0"
 577,0
@@ -56,7 +56,7 @@ pCtrlObj,"OPTIONAL: To Delete control cube 1=Delete control objects, 0=Do not de
 581,0
 582,0
 603,0
-572,157
+572,156
 #Region CallThisProcess
 # A snippet of code provided as an example how to call this process should the developer be working on a system without access to an editor with auto-complete.
 If( 1 = 0 );
@@ -212,7 +212,6 @@ While( nDelimiterIndex <> 0 );
 
 End;
 
-
 ### End Prolog ###
 573,4
 
@@ -224,7 +223,7 @@ End;
 #****Begin: Generated Statements***
 #****End: Generated Statements****
 
-575,28
+575,27
 
 #****Begin: Generated Statements***
 #****End: Generated Statements****
@@ -252,7 +251,6 @@ Else;
 EndIf;
 
 ### End Epilog ###
-
 576,CubeAction=1511DataAction=1503CubeLogChanges=0
 930,0
 638,1

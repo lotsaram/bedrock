@@ -4,7 +4,7 @@
 586,"C:\TM1\Bedrock\Data\Bedrock.Z.Cube.Placeholder.csv"
 585,"C:\TM1\Bedrock\Data\Bedrock.Z.Cube.Placeholder.csv"
 564,
-565,"e^1a7ajj]3`9fsVlFlT?MYt;eyG[o7fY2o?3:?8BsQ`qtv>AfTwZswuG[9MEMm`6z]\f=wlR2XAps6a<XDA;9H3d5xd?k0ey\9HHqXxC<nHklcTi1kT3Tsc1?3J]NWKfZt8?50X0`xWiiz@Z63Cdd0Dz00vMeBc6aB[DuDvvl=Xt?^\3ZmyIzdwAk=F4:=o;F9jnAI_W"
+565,"hwua2cNIa5DzKZpK]PrIea4x1DxKFA_C8]XCK4?zC]n?iK59ScAuTLJ89NHwOCS<7OoKzV3pjyyzYJQo3cZaj;LyR^dKh03H]EH=p;dgX3x_F\_HIS_bkHO`CtWUFZef`aOCK9baL@jFUQ[KD9?chO5tAbWlfsnJSf:efgk9Dbs0[6UrM74APLYNw4xIrl^h6L@c5[qH"
 559,1
 928,0
 593,
@@ -25,7 +25,7 @@
 569,2
 592,0
 599,1000
-560,24
+560,23
 pLogOutput
 pStrictErrorHandling
 pCube
@@ -40,7 +40,6 @@ pQuote
 pDecimalSeparator
 pThousandSeparator
 pCumulate
-pCubeLogging
 pSandbox
 pZeroFilter
 pMappingToNewDims
@@ -50,7 +49,7 @@ pEleDelim
 pCharacterSet
 pFileDelete
 pSkipInvalidRecords
-561,24
+561,23
 1
 1
 2
@@ -65,7 +64,6 @@ pSkipInvalidRecords
 2
 2
 1
-1
 2
 1
 2
@@ -75,7 +73,7 @@ pSkipInvalidRecords
 2
 1
 1
-590,24
+590,23
 pLogOutput,0
 pStrictErrorHandling,0
 pCube,""
@@ -90,7 +88,6 @@ pQuote,""""
 pDecimalSeparator,"."
 pThousandSeparator,","
 pCumulate,0
-pCubeLogging,0
 pSandbox,""
 pZeroFilter,0
 pMappingToNewDims,""
@@ -100,7 +97,7 @@ pEleDelim,"+"
 pCharacterSet,"TM1CS_UTF8"
 pFileDelete,0
 pSkipInvalidRecords,0
-637,24
+637,23
 pLogOutput,"OPTIONAL: Write parameters and action summary to server message log (Boolean True = 1)"
 pStrictErrorHandling,"OPTIONAL: On encountering any error, exit with major error status by ProcessQuit after writing to the server message log (Boolean True = 1)"
 pCube,"REQUIRED: Target Cube"
@@ -115,7 +112,6 @@ pQuote,"REQUIRED: Quote (Accepts empty quote, 2 or 3 digits = ASCII code)"
 pDecimalSeparator,"OPTIONAL: Decimal separator for conversion of number to string and string to number (default = '.' exactly 3 digits = ASCII code)"
 pThousandSeparator,"OPTIONAL: Thousand separator for conversion of number to string and string to number (default = ',' exactly 3 digits = ASCII code)"
 pCumulate,"REQUIRED: Accumulate Amounts (0 = Overwrite values, 1 = Accumulate values)"
-pCubeLogging,"Required: Cube Logging (0 = No transaction logging, 1 = Logging of transactions, 2 = Ignore Cube Logging - No Action Taken)"
 pSandbox,"OPTIONAL: To use sandbox not base data enter the sandbox name (invalid name will result in process error)"
 pZeroFilter,"OPTIONAL: Source file includes Zero out filter (0=No filter line in source file, 1=Ignore filter line, 2=Perform ZeroOut using filter line)"
 pMappingToNewDims,"REQUIRED IF TARGET HAS DIMS NOT IN SOURCE: DimX¦InputElementForDimX & DimY¦InputElementForDimY (specify an N level element for each new dim)"
@@ -312,7 +308,7 @@ VarType=32ColType=827
 VarType=32ColType=827
 VarType=32ColType=827
 603,0
-572,1004
+572,998
 #Region CallThisProcess
 # A snippet of code provided as an example how to call this process should the developer be working on a system without access to an editor with auto-complete.
 If( 1 = 0 );
@@ -321,7 +317,7 @@ If( 1 = 0 );
     	'pCube', '', 'pSrcDir', '', 'pSrcFile', '',
     	'pDim', '', 'pSrcEle', '', 'pTgtEle', '',
     	'pTitleRows', 1, 'pDelim', ',', 'pQuote', '"', 'pDecimalSeparator', '.', 'pThousandSeparator', ',',
-    	'pCumulate', 0, 'pCubeLogging', 0, 'pSandbox', pSandbox, 'pZeroFilter', 0, 
+    	'pCumulate', 0, 'pSandbox', pSandbox, 'pZeroFilter', 0, 
     	'pMappingToNewDims','', 'pDimDelim', '&', 'pEleStartDelim', '¦', 'pEleDelim', '+', 'pFileDelete', 0, 'pSkipInvalidRecords', 0
     );
 EndIf;
@@ -331,7 +327,7 @@ EndIf;
 #****End: Generated Statements****
 
 ################################################################################################# 
-##~~Join the bedrock TM1 community on GitHub https://github.com/cubewise-code/bedrock Ver 4.0~~##
+##~~Join the bedrock TM1 community on GitHub https://github.com/cubewise-code/bedrock Ver 4.2~~##
 ################################################################################################# 
 
 #Region @DOC
@@ -377,7 +373,7 @@ cRandomInt        = NumberToString( INT( RAND( ) * 1000 ));
 cTempSub          = cThisProcName |'_'| cTimeStamp |'_'| cRandomInt;
 cMsgErrorLevel    = 'ERROR';
 cMsgErrorContent  = 'User:%cUserName% Process:%cThisProcName% ErrorMsg:%sMessage%';
-cLogInfo          = 'Process:%cThisProcName% run with parameters pSrcDir:%pSrcDir%, pSrcFile:%pSrcFile%, pCube:%pCube%, pDim:%pDim%, pSrcEle:%pSrcEle%, pTgtEle:%pTgtEle%, pTitleRows:%pTitleRows%, pDelim:%pDelim%, pQuote:%pQuote%, pCumulate:%pCumulate%, pCubeLogging:%pCubeLogging%, pSandbox:%pSandbox%, pZeroFilter:%pZeroFilter%, pMappingToNewDims:%pMappingToNewDims%, pDimDelim:%pDimDelim%, pEleStartDelim:%pEleStartDelim%, pEleDelim:%pEleDelim%.';   
+cLogInfo          = 'Process:%cThisProcName% run with parameters pSrcDir:%pSrcDir%, pSrcFile:%pSrcFile%, pCube:%pCube%, pDim:%pDim%, pSrcEle:%pSrcEle%, pTgtEle:%pTgtEle%, pTitleRows:%pTitleRows%, pDelim:%pDelim%, pQuote:%pQuote%, pCumulate:%pCumulate%, pSandbox:%pSandbox%, pZeroFilter:%pZeroFilter%, pMappingToNewDims:%pMappingToNewDims%, pDimDelim:%pDimDelim%, pEleStartDelim:%pEleStartDelim%, pEleDelim:%pEleDelim%.';   
 cMinLenASCIICode = 2;
 cMaxLenASCIICode = 3;
 
@@ -1301,12 +1297,6 @@ END;
 #EndRegion ### MAPPING Target DIMENSIONS #####
 ##############################################
 
-#CubeLogging
-If ( pCubeLogging <= 1 );
-  sCubeLogging = CellGetS('}CubeProperties', pCube, 'LOGGING' );
-  CubeSetLogChanges( pCube, pCubeLogging);
-EndIf;
-
 ### Assign Datasource ###
 DataSourceType                  = 'CHARACTERDELIMITED';
 DatasourceNameForServer         = sFile;
@@ -1594,7 +1584,6 @@ If( nRecordProcessedCount = 1 );
        'pDimDelim', sImportedDelimDim,
        'pEleStartDelim', sImportedElementStartDelim,
        'pEleDelim', sImportedDelimElem,
-       'pCubeLogging', pCubeLogging,
        'pTemp', 1,
        'pSandbox', pSandbox
       );
@@ -2425,20 +2414,16 @@ ElseIf( nDimensionCount = 27 );
   
 ## Increase Record count
 nRecordPostedCount = nRecordPostedCount + 1;
+
 ### End Data ###
-575,44
+575,39
 #****Begin: Generated Statements***
 #****End: Generated Statements****
 
 ################################################################################################# 
-##~~Join the bedrock TM1 community on GitHub https://github.com/cubewise-code/bedrock Ver 4.0~~##
+##~~Join the bedrock TM1 community on GitHub https://github.com/cubewise-code/bedrock Ver 4.2~~##
 ################################################################################################# 
 
-#Cube Logging
-If ( pCubeLogging <= 1 );
-  CubeSetLogChanges( pCube, If(sCubeLogging@='YES',1,0) );
-EndIf;
-    
 ### Delete source file (only if no errors) ###
 If( nErrors = 0 & pFileDelete = 1 );
     ASCIIDelete(sFile);

@@ -4,7 +4,7 @@
 586,"Bedrock Test"
 585,"Bedrock Test"
 564,
-565,"gItNDbny3GevgI1[@7TfSbYL5?DqyIZ>faK<S6ybGlzGjoY4[q6jLDmy0ZugHGwF;AozJSD0`TJzj\YVz4c<SBXgJmNRJfTMkWk?mcn;43l[;A`lH5fCJfQ4]R[o\Rie5eBb6SL8=6V0Iecw0@1}n3@^kM8y?`qOwk=MixZk8zdctKoIPjQwHB8SNdrmC6Z@xZrBDfN"
+565,"evw<dyf`?r8uM6YE:WmGETl^d[JsTX85f`Gwh2X:>KQtqfi:K9A>_Q`64Su7[;v6Lh:tzVwS;tIzV]iRYZ?mF:bYz`BBZuQ[u8_<=S^a3K6gRdblHoq4<z7_W^N[U25eHyuJbg@Xa`4P0rNm7rJ7MNn>gJ;R0J0vy`dmHTtjo75AdD^C]Xh^[K2HMb`]T@FTp2jv3aqI"
 559,1
 928,0
 593,
@@ -25,7 +25,7 @@
 569,0
 592,0
 599,1000
-560,13
+560,12
 pLogOutput
 pStrictErrorHandling
 pSrcCube
@@ -38,8 +38,7 @@ pEleStartDelim
 pEleDelim
 pSuppressRules
 pTemp
-pCubeLogging
-561,13
+561,12
 1
 1
 2
@@ -52,8 +51,7 @@ pCubeLogging
 2
 1
 1
-1
-590,13
+590,12
 pLogOutput,0
 pStrictErrorHandling,0
 pSrcCube,""
@@ -66,8 +64,7 @@ pEleStartDelim,"¦"
 pEleDelim,"+"
 pSuppressRules,1
 pTemp,1
-pCubeLogging,0
-637,13
+637,12
 pLogOutput,"OPTIONAL: Write parameters and action summary to server message log (Boolean True = 1)"
 pStrictErrorHandling,"OPTIONAL: On encountering any error, exit with major error status by ProcessQuit after writing to the server message log (Boolean True = 1)"
 pSrcCube,"REQUIRED: Source Cube"
@@ -80,7 +77,6 @@ pEleStartDelim,"OPTIONAL: Delimiter for start of element list  (default value if
 pEleDelim,"OPTIONAL: Delimiter between elements (default value if blank = '+')"
 pSuppressRules,"REQUIRED: Skip rule values? (1=skip)"
 pTemp,"REQUIRED: Delete temporary view and Subset ( 0 = Retain View and Subsets 1 = Delete View and Subsets 2 = Delete View only )"
-pCubeLogging,"Required: Cube Logging (0 = No transaction logging, 1 = Logging of transactions, 2 = Ignore Cube Logging - No Action Taken)"
 577,28
 v1
 v2
@@ -266,7 +262,7 @@ If( 1 = 0 );
     	'pIncludeRules', 1, 'pIncludeData', 0,
     	'pFilter', '',
     	'pDimDelim', '&', 'pEleStartDelim', '¦', 'pEleDelim', '+',
-    	'pSuppressRules', 1, 'pTemp', 1, 'pCubeLogging', 0
+    	'pSuppressRules', 1, 'pTemp', 1
     );
 EndIf;
 #EndRegion CallThisProcess
@@ -308,7 +304,7 @@ cRandomInt      = NumberToString( INT( RAND( ) * 1000 ));
 cTempSub        = cThisProcName |'_'| cTimeStamp |'_'| cRandomInt;
 cMsgErrorLevel  = 'ERROR';
 cMsgErrorContent= 'User:%cUserName% Process:%cThisProcName% ErrorMsg:%sMessage%';
-cLogInfo        = 'Process:%cThisProcName% run with parameters pSrcCube:%pSrcCube%, pTgtCube:%pTgtCube%, pIncludeRules:%pIncludeRules%, pIncludeData:%pIncludeData%, pFilter:%pFilter%, pDimDelim:%pDimDelim%, pEleStartDelim:%pEleStartDelim%, pEleDelim:%pEleDelim%, pSuppressRules:%pSuppressRules%, pTemp:%pTemp%, pCubeLogging:%pCubeLogging%.' ;   
+cLogInfo        = 'Process:%cThisProcName% run with parameters pSrcCube:%pSrcCube%, pTgtCube:%pTgtCube%, pIncludeRules:%pIncludeRules%, pIncludeData:%pIncludeData%, pFilter:%pFilter%, pDimDelim:%pDimDelim%, pEleStartDelim:%pEleStartDelim%, pEleDelim:%pEleDelim%, pSuppressRules:%pSuppressRules%, pTemp:%pTemp%.' ;   
 cDimCountMax    = 30 ;
 
 ## LogOutput parameters
@@ -421,8 +417,8 @@ nRet = ExecuteProcess('}bedrock.cube.data.copy.intercube',
     'pDimDelim', pDimDelim,
     'pEleStartDelim', pEleStartDelim,
     'pEleDelim', pEleDelim,
-    'pTemp', pTemp,
-    'pCubeLogging', pCubeLogging);
+    'pTemp', pTemp
+);
 
   IF(nRet <> 0);
     sMessage = 'Error copying data.';

@@ -4,7 +4,7 @@
 586,"}APQ Staging TempSource"
 585,"}APQ Staging TempSource"
 564,
-565,"k6LX;[ANEe8aDicM8WIF0F@ZtUyRN48\uJO7X@zymRj3eF`F@LmRQ6RFQUYnXs5M=N5?7EaRm:F]aBzcapy]Vef7g@K9yqW8[Gn3ycAKjzXRr:6yeudy]FrR?11?xC7uBh9O_gLz@xz1:t<eBbFhKu>=Hs_AO=krHKq6@O]j_0Sc9<RT\O6uJQcy[K:SFNBt4aY?[3Iv"
+565,"jYvRcCZPuVaipQ^fx0GxQpc<>sST5jBFB20pW@Zy[i0xU7GC<>lzk5Zk2[tAMXhvd5xoR;GR2Yfc?GEvT>hhRPot]lqtrQetwO<AI6[Cq9Iz0fy@AMb2jqZZp5oh^V?BE20je[SIH1>\edWsPhQK5Vw_c222hR?w8::DA6fs>ZNmxg^]R?xisWyy=L7rHtqDR9VJTjI3"
 559,1
 928,0
 593,
@@ -25,7 +25,7 @@
 569,0
 592,0
 599,1000
-560,29
+560,28
 pLogoutput
 pStrictErrorHandling
 pCube
@@ -42,7 +42,6 @@ pSuppressRules
 pSuppressConsolStrings
 pIncludeDescendants
 pZeroSource
-pCubeLogging
 pTemp
 pFilePath
 pFileName
@@ -55,7 +54,7 @@ pSandbox
 pSubN
 pCharacterSet
 pCubeNameExport
-561,29
+561,28
 1
 1
 2
@@ -73,7 +72,6 @@ pCubeNameExport
 1
 1
 1
-1
 2
 2
 2
@@ -85,7 +83,7 @@ pCubeNameExport
 1
 2
 1
-590,29
+590,28
 pLogoutput,0
 pStrictErrorHandling,0
 pCube,""
@@ -102,7 +100,6 @@ pSuppressRules,1
 pSuppressConsolStrings,0
 pIncludeDescendants,0
 pZeroSource,0
-pCubeLogging,0
 pTemp,1
 pFilePath,""
 pFileName,""
@@ -115,7 +112,7 @@ pSandbox,""
 pSubN,0
 pCharacterSet,""
 pCubeNameExport,1
-637,29
+637,28
 pLogoutput,"OPTIONAL: Write parameters and action summary to server message log (Boolean True = 1)"
 pStrictErrorHandling,"OPTIONAL: On encountering any error, exit with major error status by ProcessQuit after writing to the server message log (Boolean True = 1)"
 pCube,"REQUIRED: Cube name"
@@ -132,7 +129,6 @@ pSuppressRules,"OPTIONAL: Suppress Rule Values? (1=Suppress)"
 pSuppressConsolStrings,"OPTIONAL: Suppress Strings on Consolidations (Skip = 1) (Default = 0)"
 pIncludeDescendants,""
 pZeroSource,"OPTIONAL: Zero Out view AFTER Copy? (Boolean 1=True)"
-pCubeLogging,"Required: Cube Logging (0 = No transaction logging, 1 = Logging of transactions, 2 = Ignore Cube Logging - No Action Taken)"
 pTemp,"OPTIONAL: Retain temporary view and Subset ( 0 = retain View and Subsets 1 = use temp objects)"
 pFilePath,"OPTIONAL: Export Directory (will default to error file path)"
 pFileName,"OPTIONAL: Export Filename (If Left Blank Defaults to cube_export.csv)"
@@ -768,7 +764,7 @@ If( 1 = 0 );
     	'pFilterParallel', '', 'pParallelThreads', 0,
     	'pDimDelim', '&', 'pEleStartDelim', '¦', 'pEleDelim', '+',
     	'pSuppressZero', 1, 'pSuppressConsol', 1, 'pSuppressRules', 1, 'pSuppressConsolStrings', 1, 'pIncludeDescendants',0,
-    	'pZeroSource', 0, 'pCubeLogging', 0, 'pTemp', 1,
+    	'pZeroSource', 0, 'pTemp', 1,
     	'pFilePath', '', 'pFileName', '',
     	'pDelim', ',','pDecimalSeparator','.','pThousandSeparator',',',
       'pQuote', '"', 'pTitleRecord', 1, 'pSandbox', pSandbox, 'pSubN', pSubN, 'pCubeNameExport', pCubeNameExport
@@ -822,7 +818,7 @@ cTimeStamp        = TimSt( Now, '\Y\m\d\h\i\s' );
 cRandomInt        = NumberToString( INT( RAND( ) * 1000 ));
 cMsgErrorLevel    = 'ERROR';
 cMsgErrorContent  = 'User:%cUserName% Process:%cThisProcName% ErrorMsg:%sMessage%';
-cLogInfo          = 'Process:%cThisProcName% run with parameters pCube:%pCube%, pView:%pView%, pFilter:%pFilter%, pFilterParallel:%pFilterParallel%, pParallelThreads:%pParallelThreads%, pDimDelim:%pDimDelim%, pEleStartDelim:%pEleStartDelim%, pEleDelim:%pEleDelim%, pSuppressZero:%pSuppressZero%, pSuppressConsol:%pSuppressConsol%, pSuppressRules:%pSuppressRules%, pZeroSource:%pZeroSource%, pCubeLogging:%pCubeLogging%, pTemp:%pTemp%, pFilePath:%pFilePath%, pFileName:%pFileName%, pDelim:%pDelim%, pQuote:%pQuote%, pTitleRecord:%pTitleRecord%, pSandbox:%pSandbox%, pSuppressConsolStrings:%pSuppressConsolStrings%  pIncludeDescendants %pIncludeDescendants%.';
+cLogInfo          = 'Process:%cThisProcName% run with parameters pCube:%pCube%, pView:%pView%, pFilter:%pFilter%, pFilterParallel:%pFilterParallel%, pParallelThreads:%pParallelThreads%, pDimDelim:%pDimDelim%, pEleStartDelim:%pEleStartDelim%, pEleDelim:%pEleDelim%, pSuppressZero:%pSuppressZero%, pSuppressConsol:%pSuppressConsol%, pSuppressRules:%pSuppressRules%, pZeroSource:%pZeroSource%, pTemp:%pTemp%, pFilePath:%pFilePath%, pFileName:%pFileName%, pDelim:%pDelim%, pQuote:%pQuote%, pTitleRecord:%pTitleRecord%, pSandbox:%pSandbox%, pSuppressConsolStrings:%pSuppressConsolStrings%  pIncludeDescendants %pIncludeDescendants%.';
 cDefaultView      = Expand( '%cThisProcName%_%cTimeStamp%_%cRandomInt%' );
 cLenASCIICode     = 3;
 
@@ -1109,7 +1105,7 @@ If( Scan( pEleStartDelim, pFilterParallel ) > 0 );
         	'pFilter', sFilter, 'pFilterParallel', '',
         	'pDimDelim', pDimDelim, 'pEleStartDelim', pEleStartDelim, 'pEleDelim', pEleDelim,
         	'pSuppressZero', pSuppressZero, 'pSuppressConsol', pSuppressConsol, 'pSuppressRules', pSuppressRules,
-        	'pZeroSource', pZeroSource, 'pCubeLogging', pCubeLogging,
+        	'pZeroSource', pZeroSource, 
         	'pTemp', pTemp, 'pFilePath', pFilePath, 'pFileName', sFileName,
         	'pDelim', pFieldDelim, 'pDecimalSeparator', pDecimalSeparator, 'pThousandSeparator', pThousandSeparator,
           'pQuote', pQuote, 'pTitleRecord', pTitleRecord, 'pSandbox', pSandbox, 'pSuppressConsolStrings', pSuppressConsolStrings, 'pCubeNameExport', pCubeNameExport
@@ -1127,7 +1123,7 @@ If( Scan( pEleStartDelim, pFilterParallel ) > 0 );
     	'pFilter', sFilter, 'pFilterParallel', '',
     	'pDimDelim', pDimDelim, 'pEleStartDelim', pEleStartDelim, 'pEleDelim', pEleDelim,
     	'pSuppressZero', pSuppressZero, 'pSuppressConsol', pSuppressConsol, 'pSuppressRules', pSuppressRules,
-    	'pZeroSource', pZeroSource, 'pCubeLogging', pCubeLogging,
+    	'pZeroSource', pZeroSource, 
     	'pTemp', pTemp, 'pFilePath', pFilePath, 'pFileName', sFileName,
     	'pDelim', pFieldDelim, 'pDecimalSeparator', pDecimalSeparator, 'pThousandSeparator', pThousandSeparator,
       'pQuote', pQuote, 'pTitleRecord', pTitleRecord, 'pSandbox', pSandbox, 'pSuppressConsolStrings', pSuppressConsolStrings, 'pCubeNameExport', pCubeNameExport
@@ -1300,7 +1296,7 @@ ENDIF;
 TextOutput( cExportFile, Expand(sRow) );
 
 ### End Data ###
-575,42
+575,36
 #****Begin: Generated Statements***
 #****End: Generated Statements****
 
@@ -1310,13 +1306,7 @@ TextOutput( cExportFile, Expand(sRow) );
 
 ### Delete source data ###
 If( pZeroSource = 1 & nErrors = 0 & nParallelRun = 0 );
-    If ( pCubeLogging <= 1 );
-      CubeSetLogChanges( pCube, pCubeLogging);
-    EndIf;
     ViewZeroOut( pCube, cView );
-    If ( pCubeLogging <= 1 );
-      CubeSetLogChanges( pCube, IF(sCubeLogging@='YES',1,0) );
-    EndIf;
 EndIf;
 
 ### Return code & final error message handling

@@ -4,7 +4,7 @@
 586,"Variables"
 585,"Variables"
 564,
-565,"ebMLmy[wi8[XJ9@YvPUG:eLQF<OIgro|PCN?0Oamg7[K>Ejkv3N_Mso;klTqmL9B6l;uJ0p0ITg1GpUwl3lM`L1R=YG<TW3h0ze?=4`h>POrl>Es1avP72<d^gKdB_o_PiR=ppM:txF{b<BjVOa;m39NREGVY]ryxWje8x>AD@nchYsXeIWW<B;87tW9LuF2V>tE[`T="
+565,"nM\_thgUlLD5CCyFszgD<Ei?dU2pjS3~@>b_I@hO;Wpm=Fz5jh\=rxwF0iTa2O2b]1Dwj=]u?Yi17~5rHs8C3zyZFIF|ACbH[4C?m7SM:xwWs6LsAL5xQRBAKCY_NO]wVeB4@iCe_iMzrbnhFiz>]fTo1UmAIT3c5Tl5rO1auk9Jo9YKMYP8>BKEoBmmH|v7FNcBmb@p"
 559,1
 928,0
 593,
@@ -713,7 +713,7 @@ ElseIf( nDims = 100 );
   CubeCreate( Trim( pCube ), sDim01, sDim02, sDim03, sDim04, sDim05, sDim06, sDim07, sDim08, sDim09, sDim10, sDim11, sDim12, sDim13, sDim14, sDim15, sDim16, sDim17, sDim18, sDim19, sDim20, sDim21, sDim22, sDim23, sDim24, sDim25, sDim26, sDim27, sDim28, sDim29, sDim30, sDim31, sDim32, sDim33, sDim34, sDim35, sDim36, sDim37, sDim38, sDim39, sDim40, sDim41, sDim42, sDim43, sDim44, sDim45, sDim46, sDim47, sDim48, sDim49, sDim50, sDim51, sDim52, sDim53, sDim54, sDim55, sDim56, sDim57, sDim58, sDim59, sDim60, sDim61, sDim62, sDim63, sDim64, sDim65, sDim66, sDim67, sDim68, sDim69, sDim70, sDim71, sDim72, sDim73, sDim74, sDim75, sDim76, sDim77, sDim78, sDim79, sDim80, sDim81, sDim82, sDim83, sDim84, sDim85, sDim86, sDim87, sDim88, sDim89, sDim90, sDim91, sDim92, sDim93, sDim94, sDim95, sDim96, sDim97, sDim98, sDim99, sDim100 );
 EndIf;
 
-
+### End Prolog ###
 573,4
 
 #****Begin: Generated Statements***
@@ -724,7 +724,7 @@ EndIf;
 #****Begin: Generated Statements***
 #****End: Generated Statements****
 
-575,32
+575,27
 
 #****Begin: Generated Statements***
 #****End: Generated Statements****
@@ -752,11 +752,6 @@ Else;
 EndIf;
 
 ### End Epilog ###
-
-
-
-
-
 576,CubeAction=1511DataAction=1503CubeLogChanges=0
 930,0
 638,1

@@ -4,7 +4,7 @@
 586,
 585,
 564,
-565,"d[e<aMFCC]s\pMjIr@3==EuBeX6XH>q1;iG^3T@;Pq@7RO@08Ke9n59lvg@s75WXL_cABE<f;7K^Ghh8SYF1d8ogugN>GF0QZ4CTiR``EEIq?m]R[Sb7SzP9o?1awuiD8NM]XBPKZ=tsxIdOQK4ZCSXJyAkYy`zKLbxg?fx^B8_?>iIKZK[NMWNQHx?o:8CpbNwBJpow"
+565,"xOxL9781]YV5e<A4CLaJxDM;aSgG47GQZ_k;jFnc2fZM0P1PeEEUk6mWahlukRSu02k[8uQVk:ij1Ay9mQEx4Vti_BS[7xDEAa`z<Xwjl>Zwi2yd<Nvnb4qxDs3WP_WqS]yV_Z;5NJvR?ruynwCngz`:0P:aj6[kxvqj;E@37iEdTefkOH2zVEE3=<uS[JATw:SCMbQX"
 559,1
 928,0
 593,
@@ -72,7 +72,7 @@ pSkipNonExistentHoldsCubes,"OPTIONAL: When using lists and wildcards, it can lea
 581,0
 582,0
 603,0
-572,620
+572,593
 
 # A snippet of code provided as an example how to call this process should the developer be working on a system without access to an editor with auto-complete.
 If( 1 = 0 );
@@ -160,7 +160,6 @@ cUserName         = TM1User();
 cMsgErrorLevel    = 'ERROR';
 cMsgErrorContent  = 'User:%cUserName% Process:%cThisProcName% ErrorMsg:%sMessage%';
 cLogInfo          = 'Process:%cThisProcName% run with parameters pCube:%pCube%, pClient:%pClient%, pGroup:%pGroup%, pDelim:%pDelim%, pMode:%pMode%, pDir:%pDir%, pSkipNonExistentHoldsCubes:%pSkipNonExistentHoldsCubes%.' ;
-
 
 ## LogOutput parameters
 IF( pLogOutput = 1 );
@@ -284,7 +283,6 @@ Else;
    EndIf;
 EndIf;
 
-
 # # # # # # # # # #        SEARCH FOR CLIENTS BY INSPECTING CLIENTS AND GROUPS PARAMETERS
 # - pClient (mandatory or used in conjunction with pGroup). It could be a combination of:
 #     * multiple clients separated with pDelim
@@ -343,7 +341,6 @@ While( nDelimiterIndex <> 0 );
 
 End;
 
-
 ### Split parameter into individual groups and store in a temporary subset ###
 SubsetCreate( '}Groups', 'Groups subset', 1 );
 
@@ -392,7 +389,6 @@ While( nDelimiterIndex <> 0 );
 End;
 nFoundGroupsCount = SubsetGetSize( '}Groups', 'Groups subset' );
 
-
 # Now rework groups into their clients through the security memberships
 If( nFoundGroupsCount > 0 );
 
@@ -415,7 +411,6 @@ If( nFoundGroupsCount > 0 );
    End;
 EndIf;
 
-
 # If no clients found
 nFoundClientsCount = SubsetGetSize( '}Clients', 'Clients subset' );
 If( nFoundClientsCount = 0 );
@@ -429,7 +424,6 @@ Else;
    EndIf;
 EndIf;
 
-
 ### Check for errors before continuing
 If( nErrors <> 0 );
   If( pStrictErrorHandling = 1 );
@@ -438,7 +432,6 @@ If( nErrors <> 0 );
       ProcessBreak;
   EndIf;
 EndIf;
-
 
 # A double loop over cubes and clients to apply the selected action
 nCountCubes = 1;
@@ -449,12 +442,9 @@ While( nCountCubes <= nFoundCubesCount );
    nCountClients = 1;
    While( nCountClients <= nFoundClientsCount );
       sClient = SubsetGetElementName( '}Clients', 'Clients subset', nCountClients );
-
       sHoldsCube = Expand( cHoldsCube );
 
-
       If( pMode @= 'C' );
-
 
          # Create a Holds cube
          If( CubeExists( sHoldsCube ) = 1 );
@@ -527,9 +517,7 @@ While( nCountCubes <= nFoundCubesCount );
             LogOutput('INFO', Expand( sMessage ) );
          EndIf;
 
-
       ElseIf( pMode @= 'D' );
-
 
          # Destroy a Holds cube
          If( CubeExists( sHoldsCube ) = 0 );
@@ -556,9 +544,7 @@ While( nCountCubes <= nFoundCubesCount );
             EndIf;
          EndIf;
 
-
       ElseIf( pMode @= 'R' );
-
 
          # In an existing Holds cube, delete all holds (Release)
          If( CubeExists( sHoldsCube ) = 0 );
@@ -575,18 +561,6 @@ While( nCountCubes <= nFoundCubesCount );
          Else;
 
             CubeClearData( sHoldsCube );
-            # nRet = ExecuteProcess( '}bedrock.cube.data.clear', 'pLogOutput', pLogOutput, 'pStrictErrorHandling', pStrictErrorHandling,
-            #    'pCube', sHoldsCube, 'pView', '', 'pFilter', '', 'pSuppressConsolStrings', 0, 'pCubeLogging', 2 );
-            # If( nRet <> 0 );
-            #    sMessage = 'Error releasing all the holds in the cube ''%sHoldsCube%''.';
-            #    nErrors = 1;
-            #    LogOutput( cMsgErrorLevel, Expand( cMsgErrorContent ) );
-            #    If( pStrictErrorHandling = 1 );
-            #       ProcessQuit;
-            #    Else;
-            #       ProcessBreak;
-            #    EndIf;
-            # EndIf;
             If( pLogOutput = 1 );
                sMessage = Expand( 'All the holds in the cube ''%sHoldsCube%'' were released.' );
                LogOutput('INFO', Expand( sMessage ) );
@@ -594,9 +568,7 @@ While( nCountCubes <= nFoundCubesCount );
 
          EndIf;
 
-
       ElseIf( pMode @= 'X' );
-
 
          # From an existing Holds cube, export all entries
          If( CubeExists( sHoldsCube ) = 0 );
@@ -629,7 +601,7 @@ While( nCountCubes <= nFoundCubesCount );
             sFileName = sHoldsCube | '.csv';
             nRet = ExecuteProcess( '}bedrock.cube.data.export', 'pLogOutput', pLogOutput, 'pStrictErrorHandling', pStrictErrorHandling,
                'pCube', sHoldsCube, 'pView', '', 'pFilter', '', 'pSuppressConsol', 0, 'pSuppressConsolStrings', 0,
-               'pCubeLogging', 2, 'pFilePath', pDir, 'pFileName', sFileName );
+               'pFilePath', pDir, 'pFileName', sFileName );
             If( nRet <> 0 );
                sMessage = Expand( 'Error exporting all the holds from the cube ''%sHoldsCube%'' to a flat file.' );
                nErrors = 1;
@@ -648,7 +620,6 @@ While( nCountCubes <= nFoundCubesCount );
 
 
       ElseIf( pMode @= 'M' );
-
 
          # To an existing Holds cube, import all entries
          # If the Holds cube does not exist, you need to create it first with mode C
@@ -670,7 +641,7 @@ While( nCountCubes <= nFoundCubesCount );
             # the file name is simply the Holds cube name with file extension csv
             sFileName = sHoldsCube | '.csv';
             nRet = ExecuteProcess( '}bedrock.cube.data.import', 'pLogOutput', pLogOutput, 'pStrictErrorHandling', pStrictErrorHandling,
-               'pCube', sHoldsCube, 'pSrcDir', pDir, 'pSrcFile', sFileName, 'pCubeLogging', 2, 'pFileDelete', 0, 'pSkipInvalidRecords', 0 );
+               'pCube', sHoldsCube, 'pSrcDir', pDir, 'pSrcFile', sFileName, 'pFileDelete', 0, 'pSkipInvalidRecords', 0 );
             If( nRet <> 0 );
                sMessage = Expand( 'Error importing all the holds to the cube ''%sHoldsCube%'' from a flat file.' );
                nErrors = 1;
@@ -693,11 +664,13 @@ While( nCountCubes <= nFoundCubesCount );
 
    nCountCubes = nCountCubes + 1;
 End;
+
+### End Prolog ###
 573,1
 
 574,1
 
-575,22
+575,24
 
 #################################################################################################
 ##~~Join the bedrock TM1 community on GitHub https://github.com/cubewise-code/bedrock Ver 4.0~~##
@@ -720,6 +693,8 @@ Else;
       LogOutput('INFO', Expand( sProcessAction ) );
    EndIf;
 EndIf;
+
+### End Epilog ###
 576,_ParameterConstraints=e30=
 930,0
 638,1
