@@ -4,7 +4,7 @@
 586,"}APQ Staging TempSource"
 585,"}APQ Staging TempSource"
 564,
-565,"jYvRcCZPuVaipQ^fx0GxQpc<>sST5jBFB20pW@Zy[i0xU7GC<>lzk5Zk2[tAMXhvd5xoR;GR2Yfc?GEvT>hhRPot]lqtrQetwO<AI6[Cq9Iz0fy@AMb2jqZZp5oh^V?BE20je[SIH1>\edWsPhQK5Vw_c222hR?w8::DA6fs>ZNmxg^]R?xisWyy=L7rHtqDR9VJTjI3"
+565,"nhjjT[4qp\R[wua2CHBm204Vz`9bGSX<R_K_D3O>guS]rZUE^^7a@p]mV_SWe`@OupKoq_^nIaw0sMWf87drDTzPUGF0j6iWt@w4?UduNd=f>9=QD]WkyIY?Ra3gOQXSyN2d`i1_j1?G8xLMApD_3dg^wU;2sbEplo\PPQ5zs_r[D;l_o_s]N_<^h>tE5SLFW63Bbag0"
 559,1
 928,0
 593,
@@ -754,7 +754,7 @@ VarType=32ColType=827
 VarType=32ColType=827
 VarType=32ColType=827
 603,0
-572,488
+572,482
 #Region CallThisProcess
 # A snippet of code provided as an example how to call this process should the developer be working on a system without access to an editor with auto-complete.
 If( 1 = 0 );
@@ -1056,9 +1056,6 @@ EndIf;
 IF ( nErrors > 0 );
     DataSourceType = 'NULL';
     If( pStrictErrorHandling = 1 );
-        If( CubeExists(pCube) = 1 );
-          CubeSetLogChanges( pCube, IF(sCubeLogging@='YES',1,0) );
-        EndIf;
         ProcessQuit;
     Else;
         ProcessBreak;
@@ -1220,9 +1217,6 @@ Else;
       nErrors = nErrors + 1;
       LogOutput( cMsgErrorLevel, Expand( cMsgErrorContent ) );
       If( pStrictErrorHandling = 1 );
-          If( CubeExists(pCube) = 1 );
-            CubeSetLogChanges( pCube, IF(sCubeLogging@='YES',1,0) );
-          EndIf;
           ProcessQuit;
       Else;
           ProcessBreak;
@@ -1296,7 +1290,7 @@ ENDIF;
 TextOutput( cExportFile, Expand(sRow) );
 
 ### End Data ###
-575,36
+575,33
 #****Begin: Generated Statements***
 #****End: Generated Statements****
 
@@ -1316,9 +1310,6 @@ If( nErrors > 0 );
     LogOutput( cMsgErrorLevel, Expand( cMsgErrorContent ) );
     sProcessReturnCode = Expand( '%sProcessReturnCode% Process:%cThisProcName% completed with errors. Check tm1server.log for details.' );
     If( pStrictErrorHandling = 1 );
-        If( CubeExists(pCube) = 1 );
-          CubeSetLogChanges( pCube, IF(sCubeLogging@='YES',1,0) );
-        EndIf;
         ProcessQuit;
     EndIf;
 Else;
