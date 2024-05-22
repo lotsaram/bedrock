@@ -4,7 +4,7 @@
 586,
 585,
 564,
-565,"vudHwM\9I[h`fRK;wJ`D7laVpRX=xg4Wz^TDgi=O@`iMR`fsHB4Ow_]xqyWC?^viyF5>AMDQ<5fJGXxMeniTt8qq^GzcZ<gD0S93]\7:>7x867g[Gy;H_`0BzB\\u[Qm\RbHqLTHEyD0V[=\snbw7?TMvE`XI7u<[KOikhyU49oXgAU8?^CFM0zap_x;AjxpP9x[g@x3"
+565,"t:mgNArxiB`pH;5KkwSca@Q6p`Cxu0P2dPd;78Vdiobg9Lu;m0lCav4id]ec4bCdF3FYQFp\UcHMvdc66P>ZKKFHucN34hWK[lrw20;_19wj^;[9>AXB3`7ux=dvvVtCwqSzTMqEuv3MDh<<6lAFV2e<;0=D5cVlJUFonO]pM`Y8_d40bS1k:g?tA]1nY69jZrpd01;u"
 559,1
 928,0
 593,
@@ -68,7 +68,7 @@ pTemp,"REQUIRED: Delete the clone cube (1 = delete, 0 = not delete)"
 581,0
 582,0
 603,0
-572,333
+572,331
 #Region CallThisProcess
 # A snippet of code provided as an example how to call this process should the developer be working on a system without access to an editor with auto-complete.
 If( 1 = 0 );
@@ -264,9 +264,8 @@ IF(pIncludeData = 1);
         'pIncludeRules', nIncludeRules,
         'pIncludeData', pIncludeData,
         'pSuppressRules', nSuppressRules,
-        'pTemp', pTemp,
-        'pCubeLogging', 0
-        );
+        'pTemp', pTemp
+    );
 
     IF(nRet <> 0);
         sMessage = 'Error creating cloned cube for keeping data.';
@@ -322,9 +321,8 @@ IF(pIncludeData = 1);
         'pZeroSource', 0,
         'pZeroTarget', 0,
         'pFactor', 1,
-        'pTemp', pTemp,
-        'pCubeLogging', 0
-        );  
+        'pTemp', pTemp
+    );  
     
     IF(nRet <> 0);
         sMessage = Expand('Error copying back the data from clone cube: %pCloneCube%.');

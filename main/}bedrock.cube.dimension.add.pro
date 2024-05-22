@@ -4,7 +4,7 @@
 586,
 585,
 564,
-565,"aaVYwvZ=oxOxo0p4Vj4WTTY0f:fQQ9nVYy_dWjaStQVYREqaCL9E]Y5YQHa\EiN\dRM9rXJw_F85lRQ1tUKil2KCa15`uKEcrO?r;>TcT;S9WlMfrTToH9oAKuIJOB6]R6i49p4UJm2^o38^yWABamcR@?NT=e7DxeFZU5s_DNJ6S9DYR:I^=Y<fs_tPh\tLZ9n^vRGM"
+565,"sUcXqJQDAaT\5>aiZOCaxlo157TuAFXPhb\0a3Xo;X?vpLZIIqtQghPbsdmFT[>22Qy;Dw6WKsRi2_oCeMNO>QAmvPAIXr]62k_rv60ANO>5\>vAYo`rkPJF4iUmEdE?`Sg4H4mIAO^n`TxKldqKsB:mbHG?ng?1LaxXMVO=f`=Q3NqS[MiFz=7;>`@k=6:l6aB>Je@q"
 559,1
 928,0
 593,
@@ -76,7 +76,7 @@ pTemp,"OPTIONAL: Delete the clone cube (1 = delete, 0 = not delete)"
 581,0
 582,0
 603,0
-572,367
+572,366
 #Region CallThisProcess
 # A snippet of code provided as an example how to call this process should the developer be working on a system without access to an editor with auto-complete.
 If( 1 = 0 );
@@ -307,9 +307,8 @@ IF(pIncludeData = 1);
         'pIncludeRules', nIncludeRules,
         'pIncludeData', pIncludeData,
         'pSuppressRules', nSuppressRules,
-        'pTemp', pTemp,
-        'pCubeLogging', 0
-        );
+        'pTemp', pTemp
+    );
 
     IF(nRet <> 0);
         sMessage = 'Error creating cloned cube for keeping data.';
@@ -351,22 +350,22 @@ IF(pIncludeData = 1);
     sMappingToNewDims = pDim|sEleStartDelim|pEle;
   
     nRet = ExecuteProcess('}bedrock.cube.data.copy.intercube',
-  	'pLogOutput',pLogOutput,
-  	'pStrictErrorHandling', pStrictErrorHandling,
-  	'pSrcCube',pCloneCube,
-  	'pFilter','',
-  	'pTgtCube',pCube,
-  	'pMappingToNewDims',sMappingToNewDims,
-        'pSuppressConsol', 1,
-        'pSuppressRules', nSuppressRules,
-  	'pZeroTarget',0,
-  	'pZeroSource',0,
-  	'pFactor',1,
-  	'pDimDelim','&',
-  	'pEleStartDelim',sEleStartDelim,
-  	'pEleDelim','+',
-  	'pTemp',pTemp,
-  	'pCubeLogging',0);
+      	'pLogOutput',pLogOutput,
+      	'pStrictErrorHandling', pStrictErrorHandling,
+      	'pSrcCube',pCloneCube,
+      	'pFilter','',
+      	'pTgtCube',pCube,
+      	'pMappingToNewDims',sMappingToNewDims,
+            'pSuppressConsol', 1,
+            'pSuppressRules', nSuppressRules,
+      	'pZeroTarget',0,
+      	'pZeroSource',0,
+      	'pFactor',1,
+      	'pDimDelim','&',
+      	'pEleStartDelim',sEleStartDelim,
+      	'pEleDelim','+',
+      	'pTemp',pTemp
+  	);
     
     IF(nRet <> 0);
         sMessage = Expand('Error copying back the data from clone cube: %pCloneCube%.');
